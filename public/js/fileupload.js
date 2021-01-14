@@ -10,7 +10,6 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
         init().
             then(() => {
-                console.log("init")
                 predict();
                 loadingHide();
             })
