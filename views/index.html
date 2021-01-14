@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,102 +7,100 @@
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fffe3026f45b92b"></script>
+
 </head>
 
 <body>
+
+  <!-- 네브바 -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Eighth navbar example">
     <div class="container">
-      <a class="navbar-brand" href="#">Would you like a Music?</a>
+      <a class="navbar-brand" style="font-weight: 600;" href="/">Would you like a Face</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
         aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExample07">
+      <!-- <div class="collapse navbar-collapse" id="navbarsExample07">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-bs-toggle="dropdown"
-              aria-expanded="false">Dropdown</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdown07">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            <a class="nav-link" href="#"></a>
           </li>
         </ul>
-        <form>
-          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        </form>
-      </div>
+      </div> -->
     </div>
   </nav>
 
+  <!-- 메인 컨테이너 -->
   <main class="container">
-        
-    <!-- 이미지 업로드 -->
-    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <section class="section">
+      <h1 class="title">얼굴 놀이</h1>
+      <h2 class="subtitle">얼굴로 보는 인공지능 동물상 테스트</h2>
+  </section>
+    
     <div class="file-upload">
-      <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add
-        Image</button>
-
+      <!-- <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button> -->
       <div class="image-upload-wrap">
         <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
         <div class="drag-text">
-          <h3>Drag and drop a file or select add Image</h3>
+          <img src="upload.svg" class="mt-5 pt-5 upload" alt="upload-image">
+          <h3 class="mb-5 pb-5 pt-4  upload-text">여기에 얼굴 사진을 올려주세요~</h3>
         </div>
+
       </div>
       <div class="file-upload-content">
         <img class="file-upload-image" id="face-image" src="#" alt="your image" />
         <!-- result -->
         <p class="result-message"></p>
         <div class="chart-wrapper">
-          <div class="chart-container chart" data-size="200" data-value="88" data-arrow="up">
-          </div>
+          <div class="chart-container chart" data-value="88" data-arrow="up"></div>
         </div>
         <div id="label-container"></div>
-        <div class="image-title-wrap">
-          <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded
-              Image</span></button>
+
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_inline_share_toolbox_80z8"></div>
+            
+        <div class="pt-3 image-title-wrap">
+          <button type="button p-2" class="try-again-btn" onclick="removeUpload()">
+              <span class="try-again-text">다른 사진으로 재시도</span>
+          </button>
         </div>
+       
       </div>
     </div>
 
     <!-- 댓글 -->
     <div id="disqus_thread"></div>
   </main>
-  <script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function () { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://jsoone.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the 
-    <a href="https://disqus.com/?ref_noscript">comments powered by
-      Disqus.</a>
-  </noscript>
+  <section class="load-wrapp">
+    <div id="loading" class="spinner spinner--steps icon-spinner" aria-hidden="true"></div>
+    <!-- <div class="spinner icon-spinner-2" aria-hidden="true"></div> -->
+    <!-- <div class="spinner icon-spinner-3" aria-hidden="true"></div>
+    <div class="spinner icon-spinner-4" aria-hidden="true"></div>
+    <div class="spinner icon-spinner-5" aria-hidden="true"></div>
+    <div class="spinner icon-spinner-6" aria-hidden="true"></div> -->
+  <!-- <div class="spinner spinner--steps2 icon-spinner-7" aria-hidden="true"></div> -->
+  </section>
+  
+  <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/fileupload.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/disqus.js"></script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <!-- Face recognition -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-  <script src="chart.js"></script>
   <script type="text/javascript">
     // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
@@ -115,6 +112,9 @@
 
     // Load the image model and setup the webcam
     async function init() {
+      var containers = document.getElementsByClassName("chart")[0];
+      containers.innerHTML = '';
+      loadingShow();
       const modelURL = URL + "model.json";
       const metadataURL = URL + "metadata.json";
       // load the model and metadata
@@ -136,6 +136,7 @@
       
       prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
       const similarity = prediction[0].className;
+      const percentage = Math.floor(prediction[0].probability * 100) //.toFixed(2)
       
       var resultMessage = '';
       switch(similarity){
@@ -158,73 +159,44 @@
           resultMessage = '알수없음'
           break;
       }
+      
       $(".result-message").html(resultMessage);
-      for (let i = 0; i < maxPredictions; i++) {
-        const classPrediction =
-          prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-        labelContainer.childNodes[i].innerHTML = classPrediction;
-      }
 
       // draw chart
-      var containers = document.getElementsByClassName("chart");
-      console.log(containers)
+      var containers = document.getElementsByClassName("chart")[0];
       containers.innerHTML = '';
-
-      var dial = new Dial(containers[0]);
-      dial.animateStart();
-
-    }
-  </script>
-
-  <script>
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-          $('.image-upload-wrap').hide();
-          $('.file-upload-image').attr('src', e.target.result);
-          $('.file-upload-content').show();
-          $('.image-title').html(input.files[0].name);
-        };
-        reader.readAsDataURL(input.files[0]);
-        init().
-            then(()=> {
-              console.log("init")
-              predict();
-            })
-            .catch(err => console.log(err));
-        
-      } else {
-        removeUpload();
+      containers.setAttribute("data-value", percentage);
+      var outWidth = document.body.offsetWidth;
+            
+      if(outWidth <= 320){
+        containers.setAttribute("data-size", 100);
+        console.log("outWidth <= 320", outWidth)
+      }else if( 320 < outWidth && outWidth <= 768){
+        console.log("320 < outWidth <= 768", outWidth)
+        containers.setAttribute("data-size", 200);
       }
+      else if ( 768 < outWidth && outWidth <= 1024){
+        console.log("768 < outWidth <= 1024", outWidth)
+        containers.setAttribute("data-size", 300);
+      }
+      else if (outWidth > 1024){
+        console.log("outWidth > 1024", outWidth)
+        containers.setAttribute("data-size", 400);
+      }
+      var dial = new Dial(containers);
+      dial.animateStart();
+      
     }
-
-    function removeUpload() {
-      $('.file-upload-input').replaceWith($('.file-upload-input').clone());
-      $('.file-upload-content').hide();
-      $('.image-upload-wrap').show();
-    }
-
-    $('.image-upload-wrap').bind('dragover', function () {
-      $('.image-upload-wrap').addClass('image-dropping');
-    });
-
-    $('.image-upload-wrap').bind('dragleave', function () {
-      $('.image-upload-wrap').removeClass('image-dropping');
-    });
-
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+  </script>
 </body>
 
 <!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
-
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
 
 </html>

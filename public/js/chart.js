@@ -4,7 +4,7 @@ var Dial = function(container) {
     this.strokeWidth = this.size / 8;
     this.radius = (this.size / 2) - (this.strokeWidth / 2);
     this.value = this.container.dataset.value;
-    this.direction = this.container.dataset.arrow;
+    this.direction = ''//this.container.dataset.arrow;
     this.svg = '';
     this.defs = '';
     this.slice = '';
@@ -20,7 +20,7 @@ Dial.prototype.create = function() {
     this.createSlice();
     this.createOverlay();
     this.createText();
-    this.createArrow();
+    // this.createArrow();
     this.container.appendChild(this.svg);
 };
 
@@ -36,21 +36,22 @@ Dial.prototype.createDefs = function() {
     var linearGradient = document.createElementNS("http://www.w3.org/2000/svg", "linearGradient");
     linearGradient.setAttribute('id', 'gradient');
     var stop1 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
-    stop1.setAttribute('stop-color', '#6E4AE2');
+    stop1.setAttribute('stop-color', '#f79191');
     stop1.setAttribute('offset', '0%');
     linearGradient.appendChild(stop1);
     var stop2 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
-    stop2.setAttribute('stop-color', '#78F8EC');
+    stop2.setAttribute('stop-color', '#2744f5');
     stop2.setAttribute('offset', '100%');
     linearGradient.appendChild(stop2);
     var linearGradientBackground = document.createElementNS("http://www.w3.org/2000/svg", "linearGradient");
     linearGradientBackground.setAttribute('id', 'gradient-background');
     var stop1 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
-    stop1.setAttribute('stop-color', 'rgba(0, 0, 0, 0.2)');
+    stop1.setAttribute('stop-color', 'rgba(0,0,0,0.01)');
+    // stop1.setAttribute('stop-color', 'rgba(255,0,255,0.3)');
     stop1.setAttribute('offset', '0%');
     linearGradientBackground.appendChild(stop1);
     var stop2 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
-    stop2.setAttribute('stop-color', 'rgba(0, 0, 0, 0.05)');
+    stop2.setAttribute('stop-color', 'rgba(0, 0, 0, 0.01)');
     stop2.setAttribute('offset', '100%');
     linearGradientBackground.appendChild(stop2);
     defs.appendChild(linearGradient);
@@ -88,7 +89,8 @@ Dial.prototype.createText = function() {
     text.setAttribute('y', (this.size / 2) + fontSize / 4);
     text.setAttribute('font-family', 'Century Gothic, Lato');
     text.setAttribute('font-size', fontSize);
-    text.setAttribute('fill', '#78F8EC');
+    text.setAttribute('font-weight', 'bolder');
+    text.setAttribute('fill', '#cd4535');
     text.setAttribute('text-anchor', 'middle');
     var tspanSize = fontSize / 3;
     text.innerHTML = 0 + '<tspan font-size="' + tspanSize + '" dy="' + -tspanSize * 1.2 + '">%</tspan>';
