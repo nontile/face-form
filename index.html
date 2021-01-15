@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="public/style.css">
-  <title>Document</title>
+  <title>Face out</title>
 
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fffe3026f45b92b"></script>
-
+  <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
   <!-- 네브바 -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Eighth navbar example">
     <div class="container">
-      <a class="navbar-brand" style="font-weight: 600;" href="/">Would you like a Face</a>
+      <a class="navbar-brand" style="font-weight: 600;" href="/">Face out</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
         aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -46,10 +46,24 @@
   <!-- 메인 컨테이너 -->
   <main class="container">
     <section class="section">
-      <h1 class="title">얼굴 놀이</h1>
-      <h2 class="subtitle">얼굴로 보는 인공지능 동물상 테스트</h2>
-  </section>
-    
+      <h1 class="title">누구랑 닮은꼴</h1>
+      <h3 class="subtitle">AI가 알려주는 나와 닮은꼴 연예인 누구?</h3>
+    </section>
+
+    <!-- <h4 class="pb-3 d-flex justify-content-center">성별을 선택하세요</h4> -->
+    <section class="pb-5 d-flex justify-content-center">
+        <p class="d-flex align-items-center pe-3">여자</p>
+        <div>
+            <input type="checkbox" id="gender">
+            <label for="gender">
+                <span class="knob">
+                    <i></i>
+                </span>
+            </label>
+        </div>
+        <p class="d-flex align-items-center ps-3">남자</p>
+    </section>
+
     <div class="file-upload">
       <!-- <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button> -->
       <div class="image-upload-wrap">
@@ -58,23 +72,26 @@
           <img src="public/upload.svg" class="mt-5 pt-5 upload" alt="upload-image">
           <h3 class="mb-5 pb-5 pt-4  upload-text">여기에 얼굴 사진을 올려주세요~</h3>
         </div>
-
       </div>
+      
+      <div id="loading" class="loading" style="display:none">Loading&#8230;</div>
+
       <div class="file-upload-content">
         <img class="file-upload-image" id="face-image" src="#" alt="your image" />
         <!-- result -->
-        <p class="result-message"></p>
+        <p class="result-title"></p>
+        <p class="result-description"></p>
         <div class="chart-wrapper">
           <div class="chart-container chart" data-value="88" data-arrow="up"></div>
         </div>
         <div id="label-container"></div>
-
+        
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <div class="addthis_inline_share_toolbox_80z8"></div>
             
         <div class="pt-3 image-title-wrap">
           <button type="button p-2" class="try-again-btn" onclick="removeUpload()">
-              <span class="try-again-text">다른 사진으로 재시도</span>
+              <span class="try-again-text">다른 사진으로 한번 더!</span>
           </button>
         </div>
        
@@ -84,17 +101,7 @@
     <!-- 댓글 -->
     <div id="disqus_thread"></div>
   </main>
-  <section class="load-wrapp">
-    <div id="loading" class="spinner spinner--steps icon-spinner" aria-hidden="true"></div>
-    <!-- <div class="spinner icon-spinner-2" aria-hidden="true"></div> -->
-    <!-- <div class="spinner icon-spinner-3" aria-hidden="true"></div>
-    <div class="spinner icon-spinner-4" aria-hidden="true"></div>
-    <div class="spinner icon-spinner-5" aria-hidden="true"></div>
-    <div class="spinner icon-spinner-6" aria-hidden="true"></div> -->
-  <!-- <div class="spinner spinner--steps2 icon-spinner-7" aria-hidden="true"></div> -->
-  </section>
-  
-  <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+ 
   <script src="public/js/loading.js"></script>
   <script src="public/js/fileupload.js"></script>
   <script src="public/js/chart.js"></script>
@@ -104,17 +111,30 @@
   <!-- Face recognition -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+  <script src="public/js/data.js"></script>
   <script type="text/javascript">
+    var config = getConfig();
+    console.log(config)
     // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
     const URL = "https://teachablemachine.withgoogle.com/models/7H_mMLmZv/";
-
+    const urlMale = "https://teachablemachine.withgoogle.com/models/o9D1N5TN/";
+    const urlFemale = "https://teachablemachine.withgoogle.com/models/bB3YHn5r/";
     let model, webcam, labelContainer, maxPredictions;
 
     // Load the image model and setup the webcam
     async function init() {
+      if (document.getElementById("gender").checked) {
+        // console.log("남자")
+        // URL = urlMale;
+      } else {
+        // console.log("여자")
+        // URL = urlFemale;
+      }
+
+
       var containers = document.getElementsByClassName("chart")[0];
       containers.innerHTML = '';
       loadingShow();
@@ -141,29 +161,30 @@
       const similarity = prediction[0].className;
       const percentage = Math.floor(prediction[0].probability * 100) //.toFixed(2)
       
-      var resultMessage = '';
+      var resultMessage = {};
       switch(similarity){
         case "dog":
-          resultMessage = '강아지상'
+          resultMessage = config['dog'];
           break;
         case "cat":  
-          resultMessage = '고양이상'
+          resultMessage = config['cat'];
           break;
         case "bear":
-          resultMessage = '곰상'
+          resultMessage = config['bear'];
           break;
         case "dinosaur":
-          resultMessage = '공룡상'
+          resultMessage = config['dinosaur'];
           break;
         case "rabbit":
-          resultMessage = '토끼상'
+          resultMessage = config['rabbit'];
           break;
         default:
-          resultMessage = '알수없음'
+          resultMessage = config['err'];
           break;
       }
       
-      $(".result-message").html(resultMessage);
+      $(".result-title").html(resultMessage.name);
+      $(".result-description").html(resultMessage.description);
 
       // draw chart
       var containers = document.getElementsByClassName("chart")[0];

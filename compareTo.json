@@ -1,0 +1,25 @@
+{
+    "dog": {
+        "name": "dog",
+        "description": "귀여운 강아지"
+    },
+    "cat": {
+        "name": "cat",
+        "description": "깜찍한 고양이를 닮으셨네요"
+    },
+    "bear": {
+        "name": "bear",
+        "description": "뚱뚱한 곰"
+    },
+    "dinosaur": {
+        "name": "dinosaur",
+        "description": "무서운 공룡"
+    },
+    "rabbit": {
+        "name": "rabbit",
+        "description": "예븐 토끼"
+    },
+    "err": {
+        "name": "알 수 없 음"
+    }
+}
