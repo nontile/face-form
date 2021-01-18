@@ -1,25 +1,191 @@
 {
-    "dog": {
-        "name": "dog",
+    "w1": {
+        "name": "수지",
         "description": "귀여운 강아지"
     },
-    "cat": {
-        "name": "cat",
+    "w2": {
+        "name": "아이유",
         "description": "깜찍한 고양이를 닮으셨네요"
     },
-    "bear": {
-        "name": "bear",
+    "w3": {
+        "name": "이나영",
         "description": "뚱뚱한 곰"
     },
-    "dinosaur": {
-        "name": "dinosaur",
+    "w4": {
+        "name": "이영애",
         "description": "무서운 공룡"
     },
-    "rabbit": {
-        "name": "rabbit",
+    "w5": {
+        "name": "이효리",
         "description": "예븐 토끼"
     },
-    "err": {
-        "name": "알 수 없 음"
+    "w6": {
+        "name": "전지현",
+        "description": "귀여운 강아지"
+    },
+    "w7": {
+        "name": "한기인",
+        "description": "깜찍한 고양이를 닮으셨네요"
+    },
+    "w8": {
+        "name": "한예슬",
+        "description": "뚱뚱한 곰"
+    },
+    "w9": {
+        "name": "한지민",
+        "description": "무서운 공룡"
+    },
+    "w10": {
+        "name": "김연아",
+        "description": "예븐 토끼"
+    },
+    "w11": {
+        "name": "김태희",
+        "description": "귀여운 강아지"
+    },
+    "w12": {
+        "name": "김혜수",
+        "description": "깜찍한 고양이를 닮으셨네요"
+    },
+    "w13": {
+        "name": "김희선",
+        "description": "뚱뚱한 곰"
+    },
+    "w14": {
+        "name": "김희애",
+        "description": "무서운 공룡"
+    },
+    "w15": {
+        "name": "설현",
+        "description": "예븐 토끼"
+    },
+
+    "w16": {
+        "name": "소녀시대 윤아",
+        "description": "귀여운 강아지"
+    },
+    "w17": {
+        "name": "손예진",
+        "description": "깜찍한 고양이를 닮으셨네요"
+    },
+    "w18": {
+        "name": "송혜교",
+        "description": "뚱뚱한 곰"
+    },
+    "w19": {
+        "name": "수애",
+        "description": "무서운 공룡"
+    },
+    "w20": {
+        "name": "고현정",
+        "description": "예븐 토끼"
+    },
+    "w21": {
+        "name": "김고은",
+        "description": "귀여운 강아지"
+    },
+    "w22": {
+        "name": "김성령",
+        "description": "깜찍한 고양이를 닮으셨네요"
+    },
+    "w23": {
+        "name": "김태리",
+        "description": "뚱뚱한 곰"
+    },
+    "w24": {
+        "name": "박신혜",
+        "description": "무서운 공룡"
+    },
+    "w25": {
+        "name": "신세경",
+        "description": "예븐 토끼"
+    },
+    "m1": {
+        "name": "방탄소년단 뷔",
+        "description": "귀여운 강아지"
+    },
+    "m2": {
+        "name": "소지섭",
+        "description": "깜찍한 고양이를 닮으셨네요"
+    },
+    "m3": {
+        "name": "송준기",
+        "description": "뚱뚱한 곰"
+    },
+    "m4": {
+        "name": "안성기",
+        "description": "무서운 공룡"
+    },
+    "m5": {
+        "name": "안재홍",
+        "description": "예븐 토끼"
+    },
+    "m6": {
+        "name": "원빈",
+        "description": "귀여운 강아지"
+    },
+    "m7": {
+        "name": "유재석",
+        "description": "깜찍한 고양이를 닮으셨네요"
+    },
+    "m8": {
+        "name": "육성재",
+        "description": "뚱뚱한 곰"
+    },
+    "m9": {
+        "name": "이승기",
+        "description": "무서운 공룡"
+    },
+    "m10": {
+        "name": "이종석",
+        "description": "예븐 토끼"
+    },
+    "m11": {
+        "name": "강동원",
+        "description": "귀여운 강아지"
+    },
+    "m12": {
+        "name": "이준기",
+        "description": "깜찍한 고양이를 닮으셨네요"
+    },
+    "m13": {
+        "name": "임영웅",
+        "description": "뚱뚱한 곰"
+    },
+    "m14": {
+        "name": "정우성",
+        "description": "무서운 공룡"
+    },
+    "m15": {
+        "name": "조세호",
+        "description": "예븐 토끼"
+    },
+    "m16": {
+        "name": "조진웅",
+        "description": "귀여운 강아지"
+    },
+    "m17": {
+        "name": "박보검",
+        "description": "깜찍한 고양이를 닮으셨네요"
+    },
+    "m18": {
+        "name": "현빈",
+        "description": "뚱뚱한 곰"
+    },
+    "m19": {
+        "name": "강다니엘",
+        "description": "무서운 공룡"
+    },
+    "m20": {
+        "name": "공유",
+        "description": "예븐 토끼"
+    },
+    "m21": {
+        "name": "김우빈",
+        "description": "귀여운 강아지"
+    },
+    "m22": {
+        "name": "마동석",
+        "description": "깜찍한 고양이를 닮으셨네요"
     }
 }

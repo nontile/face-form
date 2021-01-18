@@ -119,19 +119,19 @@
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/7H_mMLmZv/";
-    const urlMale = "https://teachablemachine.withgoogle.com/models/o9D1N5TN/";
-    const urlFemale = "https://teachablemachine.withgoogle.com/models/bB3YHn5r/";
+    var URL = '';
+    const urlMale = "https://teachablemachine.withgoogle.com/models/slppZWN_x/";
+    const urlFemale = "https://teachablemachine.withgoogle.com/models/OJkAO288w/";
     let model, webcam, labelContainer, maxPredictions;
 
     // Load the image model and setup the webcam
     async function init() {
       if (document.getElementById("gender").checked) {
         // console.log("남자")
-        // URL = urlMale;
+        URL = urlMale;
       } else {
         // console.log("여자")
-        // URL = urlFemale;
+        URL = urlFemale;
       }
 
 
@@ -160,29 +160,29 @@
       prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
       const similarity = prediction[0].className;
       const percentage = Math.floor(prediction[0].probability * 100) //.toFixed(2)
-      
-      var resultMessage = {};
-      switch(similarity){
-        case "dog":
-          resultMessage = config['dog'];
-          break;
-        case "cat":  
-          resultMessage = config['cat'];
-          break;
-        case "bear":
-          resultMessage = config['bear'];
-          break;
-        case "dinosaur":
-          resultMessage = config['dinosaur'];
-          break;
-        case "rabbit":
-          resultMessage = config['rabbit'];
-          break;
-        default:
-          resultMessage = config['err'];
-          break;
-      }
-      
+      console.log(similarity)
+      // var resultMessage = {};
+      // switch(similarity){
+      //   case "dog":
+      //     resultMessage = config['dog'];
+      //     break;
+      //   case "cat":  
+      //     resultMessage = config['cat'];
+      //     break;
+      //   case "bear":
+      //     resultMessage = config['bear'];
+      //     break;
+      //   case "dinosaur":
+      //     resultMessage = config['dinosaur'];
+      //     break;
+      //   case "rabbit":
+      //     resultMessage = config['rabbit'];
+      //     break;
+      //   default:
+      //     resultMessage = config['err'];
+      //     break;
+      // }
+      resultMessage = config[similarity];
       $(".result-title").html(resultMessage.name);
       $(".result-description").html(resultMessage.description);
 
