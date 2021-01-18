@@ -78,7 +78,9 @@
       <div id="loading" class="loading" style="display:none">Loading&#8230;</div>
 
       <div class="file-upload-content">
+        <div class="box">
         <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+      </div>
         <!-- result -->
         <p class="result-title"></p>
         <p class="result-description"></p>
@@ -102,7 +104,6 @@
     <!-- 댓글 -->
     <div id="disqus_thread"></div>
   </main>
- 
   <script src="public/js/loading.js"></script>
   <script src="public/js/fileupload.js"></script>
   <script src="public/js/chart.js"></script>
@@ -115,7 +116,7 @@
   <script src="public/js/data.js"></script>
   <script type="text/javascript">
     var config = getConfig();
-    console.log(config)
+    // console.log(config)
     // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
@@ -161,28 +162,7 @@
       prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
       const similarity = prediction[0].className;
       const percentage = Math.floor(prediction[0].probability * 100) //.toFixed(2)
-      console.log(similarity)
-      // var resultMessage = {};
-      // switch(similarity){
-      //   case "dog":
-      //     resultMessage = config['dog'];
-      //     break;
-      //   case "cat":  
-      //     resultMessage = config['cat'];
-      //     break;
-      //   case "bear":
-      //     resultMessage = config['bear'];
-      //     break;
-      //   case "dinosaur":
-      //     resultMessage = config['dinosaur'];
-      //     break;
-      //   case "rabbit":
-      //     resultMessage = config['rabbit'];
-      //     break;
-      //   default:
-      //     resultMessage = config['err'];
-      //     break;
-      // }
+
       resultMessage = config[similarity];
       $(".result-title").html(resultMessage.name);
       $(".result-description").html(resultMessage.description);
@@ -208,11 +188,15 @@
       dial.animateStart();
       
     }
+
+   
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous">
   </script>
+  
+  
 </body>
 
 <!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)

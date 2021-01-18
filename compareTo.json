@@ -1,191 +1,191 @@
 {
     "w1": {
         "name": "수지",
-        "description": "귀여운 강아지"
+        "description": "당신은 청순하고 시크한 수지와 닮은 거 같아요"
     },
     "w2": {
         "name": "아이유",
-        "description": "깜찍한 고양이를 닮으셨네요"
+        "description": "귀엽고 깜찍한 아이유를 닮으셨네요"
     },
     "w3": {
         "name": "이나영",
-        "description": "뚱뚱한 곰"
+        "description": "압도적인 작은 얼굴과 다른 배우들과 뭔가 다른 묘하게 비밀스러운 얼굴을 가지고 있으시네요"
     },
     "w4": {
         "name": "이영애",
-        "description": "무서운 공룡"
+        "description": "가장 한국적인 우아한 아름다움을 가지고 있는 얼굴 입니다."
     },
     "w5": {
         "name": "이효리",
-        "description": "예븐 토끼"
+        "description": "한국의 최고의 디바 멋쟁이 효리같은 얼굴을 가지셨군요~"
     },
     "w6": {
         "name": "전지현",
-        "description": "귀여운 강아지"
+        "description": "공효진보다 예쁘고, 이나영보다 철없고, 수애보다 사악하고, 송혜교보다 건강해 보이며, 김태희보다 표현력이 풍부하다"
     },
     "w7": {
         "name": "한기인",
-        "description": "깜찍한 고양이를 닮으셨네요"
+        "description": "이국적이고 신비로운 한가인을 닮으셨군요"
     },
     "w8": {
         "name": "한예슬",
-        "description": "뚱뚱한 곰"
+        "description": "고양이상을 가진 대표적 미녀이시군요"
     },
     "w9": {
         "name": "한지민",
-        "description": "무서운 공룡"
+        "description": "토끼같이 귀엽고 예쁘 얼굴을 가지셨습니다."
     },
     "w10": {
         "name": "김연아",
-        "description": "예븐 토끼"
+        "description": "매력적인 외모와 겸손하고 털털한 성격을 가지셨습니다."
     },
     "w11": {
         "name": "김태희",
-        "description": "귀여운 강아지"
+        "description": "미모와 지성을 겸비한 자타 공인 최고의 미녀이시군요"
     },
     "w12": {
         "name": "김혜수",
-        "description": "깜찍한 고양이를 닮으셨네요"
+        "description": "살아있는 인형 같이 얼굴을 작고 눈은 크시군요"
     },
     "w13": {
         "name": "김희선",
-        "description": "뚱뚱한 곰"
+        "description": " 시대의 아이콘과 당대 최고 미녀 김희선과 꼭 같으시네요"
     },
     "w14": {
         "name": "김희애",
-        "description": "무서운 공룡"
+        "description": "나이를 가늠할 수 없는 김희애의 동안 미모"
     },
     "w15": {
         "name": "설현",
-        "description": "예븐 토끼"
+        "description": "지성을 갖춘 천사, 비주얼 담당 이시군요"
     },
 
     "w16": {
         "name": "소녀시대 윤아",
-        "description": "귀여운 강아지"
+        "description": "매력 소녀, 비주얼 담당"
     },
     "w17": {
         "name": "손예진",
-        "description": "깜찍한 고양이를 닮으셨네요"
+        "description": "대한민국, 청순 미녀 당신의 최고의 청순미를 가지셨네요"
     },
     "w18": {
         "name": "송혜교",
-        "description": "뚱뚱한 곰"
+        "description": "귀여운 미녀 송혜교를 꼭 닮으셨네요"
     },
     "w19": {
         "name": "수애",
-        "description": "무서운 공룡"
+        "description": "눈부시게 아름다운 외모, 매력이 넘쳐~"
     },
     "w20": {
         "name": "고현정",
-        "description": "예븐 토끼"
+        "description": "미스코리아 출신인 만큼 출중한 미모를 가진 고현정과 닮은꼴"
     },
     "w21": {
         "name": "김고은",
-        "description": "귀여운 강아지"
+        "description": "톡톡 튀고 상큼하고 한국미를 가지셨군요"
     },
     "w22": {
         "name": "김성령",
-        "description": "깜찍한 고양이를 닮으셨네요"
+        "description": "차가운 도시녀, 하지만 마음만은 따뜻한 당신"
     },
     "w23": {
         "name": "김태리",
-        "description": "뚱뚱한 곰"
+        "description": "밝고 긍정적인 성격에 깨끗한 외모인 김태리와 꼭 닮으셨네요"
     },
     "w24": {
         "name": "박신혜",
-        "description": "무서운 공룡"
+        "description": "보이시 하고 당찬 얼굴을 가진 당신"
     },
     "w25": {
         "name": "신세경",
-        "description": "예븐 토끼"
+        "description": "특유에 우수에찬 표정이 마음을 설래게 하는 당신"
     },
     "m1": {
         "name": "방탄소년단 뷔",
-        "description": "귀여운 강아지"
+        "description": "미소년 느낌을 주는 방탄소년단 초절정 미남"
     },
     "m2": {
         "name": "소지섭",
-        "description": "깜찍한 고양이를 닮으셨네요"
+        "description": "큰 키와 탄탄한 몸매, 잘생긴 얼굴에 묘하게 섹시한 매력"
     },
     "m3": {
         "name": "송준기",
-        "description": "뚱뚱한 곰"
+        "description": "백만불짜리 눈웃음, 여심을 사로 잡는 외모"
     },
     "m4": {
         "name": "안성기",
-        "description": "무서운 공룡"
+        "description": "따뜻하고 중후한 남자, 커피한잔 하실래요?"
     },
     "m5": {
         "name": "안재홍",
-        "description": "예븐 토끼"
+        "description": "훈훈한 외모와 자연스러운 매력이 넘치시네요"
     },
     "m6": {
         "name": "원빈",
-        "description": "귀여운 강아지"
+        "description": "사슴 같은 눈망울에 그리고 미묘하게 반항적인 태도, 대표 미남 아이콘 와!"
     },
     "m7": {
         "name": "유재석",
-        "description": "깜찍한 고양이를 닮으셨네요"
+        "description": "외모자신감, 편안하고 다정한 유재석과 닮은꼴이시네요"
     },
     "m8": {
         "name": "육성재",
-        "description": "뚱뚱한 곰"
+        "description": "잘생긴 얼굴을 우스꽝스럽게 사용하는 당신 멋져"
     },
     "m9": {
         "name": "이승기",
-        "description": "무서운 공룡"
+        "description": "이 시대의 엄친아, 누나들의 사랑을 받는 당신"
     },
     "m10": {
         "name": "이종석",
-        "description": "예븐 토끼"
+        "description": "소년과 남자의 경계를 보여주고 중성적 이미지"
     },
     "m11": {
         "name": "강동원",
-        "description": "귀여운 강아지"
+        "description": "수려한 외모의 꽃미남, 여심을 녹이는 설레임, 바로 당신"
     },
     "m12": {
         "name": "이준기",
-        "description": "깜찍한 고양이를 닮으셨네요"
+        "description": "예쁜 남자지만 무표정해지면 차갑고 냉정해 보이는 당신"
     },
     "m13": {
         "name": "임영웅",
-        "description": "뚱뚱한 곰"
+        "description": "준수하고 편안한 당신, 모두의 관심을 한 몸에"
     },
     "m14": {
         "name": "정우성",
-        "description": "무서운 공룡"
+        "description": "선이 굵고 중후한 분위기를 지니고 있는 정석 미남배우 정우성과 닮은꼴"
     },
     "m15": {
         "name": "조세호",
-        "description": "예븐 토끼"
+        "description": "평범하지만 않은 당신"
     },
     "m16": {
         "name": "조진웅",
-        "description": "귀여운 강아지"
+        "description": "약간 귀여우면서도 우직한 남자같은 당신"
     },
     "m17": {
         "name": "박보검",
-        "description": "깜찍한 고양이를 닮으셨네요"
+        "description": "부드러운 얼짱 박보검과 닮으셨네요"
     },
     "m18": {
         "name": "현빈",
-        "description": "뚱뚱한 곰"
+        "description": "우수에 차 있는 눈빛을 가진 매력남"
     },
     "m19": {
         "name": "강다니엘",
-        "description": "무서운 공룡"
+        "description": "멋쟁이, 비주얼 담당"
     },
     "m20": {
         "name": "공유",
-        "description": "예븐 토끼"
+        "description": "잘생긴 남자다운 당신, 공유와 닮은꼴"
     },
     "m21": {
         "name": "김우빈",
-        "description": "귀여운 강아지"
+        "description": "공룡상 대표연예인, 매력이 촬촬"
     },
     "m22": {
         "name": "마동석",
-        "description": "깜찍한 고양이를 닮으셨네요"
+        "description": "남자는 남자다워야, 마동석같은 당신이 진짜 남자"
     }
 }
