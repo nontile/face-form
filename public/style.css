@@ -314,6 +314,13 @@ input:checked + label > .knob > i:before {
 .adver-inner {
   padding: 5px;
 }
+@media (max-width: 576px){
+  .adver{
+    display: block;
+    width: 100%;
+  }
+}
+
 .adver-left{
   position:absolute; top: 450px;  z-index:-1;
 }
