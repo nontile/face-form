@@ -314,7 +314,7 @@ input:checked + label > .knob > i:before {
 .adver-inner {
   padding: 5px;
 }
-@media (max-width: 576px){
+@media (max-width: 1044px){
   .adver{
     display: block;
     width: 100%;
